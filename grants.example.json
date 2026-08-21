@@ -1,0 +1,20 @@
+{
+  "analyst@example.com": {
+    "systems": ["warehouse"],
+    "tools": ["gw_ping", "gw_warehouse_tables", "gw_warehouse_schema", "gw_warehouse_query", "gw_feedback"]
+  },
+  "people-ops@example.com": {
+    "systems": ["directory"],
+    "tools": ["gw_ping", "gw_directory_list_users", "gw_directory_get_user", "gw_feedback"]
+  },
+  "lead@example.com": {
+    "systems": ["warehouse", "directory"],
+    "tools": [
+      "gw_ping",
+      "gw_warehouse_tables", "gw_warehouse_schema", "gw_warehouse_query",
+      "gw_directory_list_users", "gw_directory_get_user",
+      "gw_staff_footprint",
+      "gw_feedback"
+    ]
+  }
+}
