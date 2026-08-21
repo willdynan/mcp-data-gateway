@@ -1,0 +1,8 @@
+gw_directory_get_user
+gw_directory_list_users
+gw_feedback
+gw_ping
+gw_staff_footprint
+gw_warehouse_query
+gw_warehouse_schema
+gw_warehouse_tables
