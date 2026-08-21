@@ -1,0 +1,10 @@
+[project]
+name = "mcp-data-gateway"
+version = "0.1.0"
+description = "Identity-scoped, read-only MCP server: fail-closed grants, two-sided enforcement, pinned tool surface, structured audit."
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Will Dynan", email = "williamdynan@gmail.com" }]
+
+[project.optional-dependencies]
+server = ["mcp"]
