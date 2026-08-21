@@ -1,11 +1,11 @@
 """The audited execution path — the second side of two-sided enforcement.
 
-`tools/list` filtering and this call-time check consume the same `allows()`
-decision; the filter is never the only thing standing between an identity and
-a tool. Denials are logged with an error class and zero latency, so an
-identity probing forbidden tools is distinguishable from a broken backend.
-The call event is emitted BEFORE execution: a tool that crashes the process
-still leaves the attempt on the record.
+The `tools/list` filter and this call-time check consume the same `allows()`
+decision, so the filter is never the only guard between an identity and a
+tool. The dispatcher logs denials with an error class and zero latency, so a
+probing identity looks different from a broken backend. It emits the call
+event BEFORE executing: a tool that crashes the process still leaves the
+attempt on the record.
 """
 
 import uuid

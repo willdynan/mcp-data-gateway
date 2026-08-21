@@ -2,7 +2,7 @@
 
 Stands in for the production warehouse. Free-form queries go through the SQL
 gate; the schema helpers query metadata directly and validate table names
-against the live table list rather than interpolating caller input.
+against the live table list rather than splicing caller input into SQL.
 """
 
 import sqlite3

@@ -1,8 +1,8 @@
 """The tool surface. Importing this module registers every tool.
 
-The surface is pinned by tests/tool_names.txt: adding, removing, or renaming a
-tool fails the snapshot test until the change is made deliberately in both
-places. gw_feedback is the only tool that writes, and a second test pins that.
+tests/tool_names.txt pins the surface: adding, removing, or renaming a tool
+fails the snapshot test until the change lands in both places on purpose.
+gw_feedback is the only tool that writes, and a second test pins that.
 """
 
 import json

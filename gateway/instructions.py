@@ -1,8 +1,8 @@
 """Per-identity server instructions.
 
-The MCP `instructions` field is generated from the caller's grants: a caller
-reads about the systems they hold and nothing else. Instructions that describe
-tools a caller cannot invoke train the model to attempt them and the user to
+The gateway builds the MCP `instructions` field from the caller's grants: a
+caller reads about the systems they hold and nothing else. Prose that covers
+tools a caller cannot invoke trains the model to attempt them and the user to
 distrust the errors.
 """
 

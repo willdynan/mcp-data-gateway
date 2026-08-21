@@ -2,7 +2,7 @@
 
 Every tool declares every system it reads. A combo tool that joins two systems
 lists both, because the reads are what leak — a name prefix says one system,
-the implementation can touch another.
+the code can touch another.
 """
 
 from dataclasses import dataclass

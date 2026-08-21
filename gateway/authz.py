@@ -1,12 +1,12 @@
-"""Grants store and the one authorization decision.
+"""Grants store and the one authz decision.
 
 Semantics, in order of precedence:
-- Superusers are hardcoded here, not in the store, so no store outage, empty
-  file, or UI mistake can lock the administrator out of the thing that fixes it.
-- No map at all (file absent, or never successfully parsed) denies everyone else.
-- A store read/parse failure serves the last good map — an outage must not
+- Superusers live here in code, not in the store, so no store outage, empty
+  file, or UI mistake can lock the admin out of the thing that fixes it.
+- No map at all (file absent, or never parsed clean) denies everyone else.
+- A store read or parse failure serves the last good map — an outage must not
   change anyone's access in either direction.
-- A grant names tools explicitly. Globs are rejected at parse time: a write tool
+- A grant names tools one by one. The parser rejects globs: a write tool
   added later under a granted prefix must not silently ride into a read-only
   identity.
 - A tool call needs the tool AND every system the tool reads.

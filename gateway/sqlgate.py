@@ -1,10 +1,10 @@
 """Read-only SQL gate.
 
 This gate exists for fast, specific error messages — not for safety. The real
-fence in production is the database identity's permissions; a text scan can be
-talked past, an IAM role cannot. Deliberately conservative: banned verbs are
-rejected even inside string literals, because a false refusal costs a reword
-and a false pass costs an incident.
+fence in production is the database identity's permissions. A caller can talk
+past a text scan, never past an IAM role. The gate rejects banned verbs even inside
+string literals, because a false refusal costs a reword and a false pass costs
+an incident.
 """
 
 import re

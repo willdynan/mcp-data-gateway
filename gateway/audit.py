@@ -1,8 +1,8 @@
 """Structured audit: one JSON line per event, size-capped.
 
-Call arguments are serialized as a JSON string (`args_json`), never as a nested
-object: argument shapes vary per tool, and a sink that infers one schema for
-the whole stream will eventually hit a collision and silently divert rows.
+The emitter writes call arguments as a JSON string (`args_json`), never as a
+nested object. Argument shapes vary per tool, and a sink that infers one schema
+for the whole stream will eventually collide and silently divert rows.
 """
 
 import json
