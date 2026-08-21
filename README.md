@@ -1,5 +1,7 @@
 # mcp-data-gateway
 
+![tests](https://github.com/willdynan/mcp-data-gateway/actions/workflows/tests.yml/badge.svg)
+
 Hand an AI client to one person and MCP is easy. Hand it to a team —
 analysts, people-ops, leads, each entitled to different systems — and the
 server needs an answer it can defend: who is calling, and what may they
